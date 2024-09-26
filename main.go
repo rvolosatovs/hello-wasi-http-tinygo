@@ -1,9 +1,11 @@
+//go:generate go run github.com/bytecodealliance/wasm-tools-go/cmd/wit-bindgen-go generate --world proxy ./wit
+
 package main
 
 import (
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	incominghandler "github.com/mossaka/wasi-http-with-wasm-tools-go/wasi/http/incoming-handler"
 	"github.com/mossaka/wasi-http-with-wasm-tools-go/wasi/http/types"
-	"github.com/ydnar/wasm-tools-go/cm"
 )
 
 func init() {
